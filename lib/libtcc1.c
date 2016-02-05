@@ -609,7 +609,7 @@ unsigned long long __fixunsxfdi (long double a1)
 
 /* helper functions for stdarg.h */
 
-#include <stdlib.h>
+//#include <stdlib.h>
 #ifndef __TINYC__
 /* gives "incompatible types for redefinition of __va_arg" below */
 #include <stdio.h>
