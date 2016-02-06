@@ -196,7 +196,7 @@ libtcc.so.1.0: CFLAGS+=-fPIC
 # windows utilities
 tiny_impdef$(EXESUF): win32/tools/tiny_impdef.c
 	$(CC) -o $@ $< $(CPPFLAGS) $(CFLAGS) $(LDFLAGS)
-tiny_libmaker$(EXESUF): win32/tools/tiny_libmaker.c
+tiny_libmaker$(EXESUF): tools/tiny_libmaker.c
 	$(CC) -o $@ $< $(CPPFLAGS) $(CFLAGS) $(LDFLAGS)
 
 # TinyCC runtime libraries

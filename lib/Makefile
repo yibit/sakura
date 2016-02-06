@@ -90,7 +90,7 @@ $(DIR)/%.o : %.c
 	$(XCC) -c $< -o $@ $(XFLAGS)
 $(DIR)/%.o : %.S
 	$(XCC) -c $< -o $@ $(XFLAGS)
-$(DIR)/%$(EXESUF) : $(TOP)/win32/tools/%.c
+$(DIR)/%$(EXESUF) : $(TOP)/tools/%.c
 	$(CC) -o $@ $< $(XFLAGS) $(LDFLAGS)
 
 $(OBJ) $(XAR) : $(DIR)/exists
