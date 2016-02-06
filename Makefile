@@ -300,7 +300,7 @@ endif
 
 # documentation and man page
 tcc-doc.html: tcc-doc.texi
-	-texi2html -monolithic -number $<
+	-texi2html -monolithic -number-sections -number-footnotes $<
 
 tcc.1: tcc-doc.texi
 	-$(top_srcdir)/texi2pod.pl $< tcc.pod
@@ -332,7 +332,7 @@ config.mak:
 # create release tarball from *current* git branch (including tcc-doc.html
 # and converting two files to CRLF)
 TCC-VERSION := tcc-$(shell cat $(top_srcdir)/VERSION)
-tar:    tcc-doc.html
+tar: tcc-doc.html
 	mkdir $(TCC-VERSION)
 	( cd $(TCC-VERSION) && git --git-dir ../.git checkout -f )
 	cp tcc-doc.html $(TCC-VERSION)
