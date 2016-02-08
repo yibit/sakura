@@ -65,6 +65,7 @@ lib/arm64
 tcc-doc.info
 conftest*
 tiny_libmaker
+win32
 *.dSYM
 *~
 \#*
