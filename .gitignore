@@ -67,6 +67,7 @@ conftest*
 tiny_libmaker
 win32
 *.dSYM
+*.udb
 *~
 \#*
 .#*
