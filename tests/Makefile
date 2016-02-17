@@ -41,7 +41,7 @@ ifeq ($(TARGETOS),Darwin)
 endif
 
 # run local version of tcc with local libraries and includes
-TCCFLAGS = -B$(TOP)
+TCCFLAGS = -B$(TOP) -I$(includedir)
 ifdef CONFIG_WIN32
  TCCFLAGS = -B$(top_srcdir)/win32 -I$(top_srcdir)/include -L$(TOP)
 endif

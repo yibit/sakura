@@ -64,7 +64,7 @@ else
 ifeq "$(TARGET)" "x86_64"
  OBJ = $(addprefix $(DIR)/,$(X86_64_O))
  TGT = -DTCC_TARGET_X86_64
- XCC ?= $(TCC) -B$(TOP)
+ XCC ?= $(TCC) -B$(TOP) -I$(includedir)
 else
  $(error libtcc1.a not supported on target '$(TARGET)')
 endif
