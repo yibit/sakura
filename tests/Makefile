@@ -11,8 +11,7 @@ TESTS = \
  hello-exe \
  hello-run \
  libtest \
- test3 \
- moretests
+ test3
 
 # test4 -- problem with -static
 # asmtest -- minor differences with gcc
@@ -73,9 +72,7 @@ libtest: libtcc_test$(EXESUF) $(LIBTCC1)
 libtcc_test$(EXESUF): libtcc_test.c $(top_builddir)/$(LIBTCC)
 	$(CC) -o $@ $^ $(CPPFLAGS) $(CFLAGS) $(NATIVE_DEFINES) $(LIBS) $(LINK_LIBTCC) $(LDFLAGS)
 
-moretests:
-	@echo ------------ $@ ------------
-	$(MAKE) -C tests2
+
 
 # test.ref - generate using gcc
 # copy only tcclib.h so GCC's stddef and stdarg will be used
@@ -193,7 +190,6 @@ cache: tcc_g
 
 # clean
 clean:
-	$(MAKE) -C tests2 $@
 	rm -vf *~ *.o *.a *.bin *.i *.ref *.out *.out? *.out?b *.gcc *.exe \
 	   hello libtcc_test tcctest[1234] ex? tcc_g tcclib.h
 

@@ -2,7 +2,7 @@
 # vi: ft= et tw=4 sw=4
 
 use lib 't/lib';
-use Test::sakura 'no_plan';
+use Test::Sakura 'no_plan';
 
 run_tests();
 
@@ -49,3 +49,4 @@ String 'hello', 'there' is 'hello', 'there'
 Character 'A' is 'A'
 Character 'a' is 'a'
 --- err
+

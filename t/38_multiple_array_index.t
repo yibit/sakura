@@ -2,7 +2,7 @@
 # vi: ft= et tw=4 sw=4
 
 use lib 't/lib';
-use Test::sakura 'no_plan';
+use Test::Sakura 'no_plan';
 
 run_tests();
 
@@ -48,6 +48,6 @@ int main()
 x=0: 1 2 3 4
 x=1: 5 6 7 8
 x=2: 9 10 11 12
-x=3: 13 14 15 16 
+x=3: 13 14 15 16
 --- err
 

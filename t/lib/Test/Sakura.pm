@@ -1,6 +1,6 @@
 # Copyright (C) Guiquan Zhang (guiquanz)
 
-package Test::sakura;
+package Test::Sakura;
 
 use Test::Base -Base;
 use POSIX ();
@@ -51,7 +51,7 @@ sub run_test ($) {
     my $opts = $block->opts;
     my $args = $block->args;
 
-    my $cmd = "./tcc -B./ -I/usr/local/include -D_ANSI_SOURCE -run";
+    my $cmd = "./tcc -B./ -I/usr/local/include -I./t -D_ANSI_SOURCE -run";
 
     if (defined $opts) {
         $cmd .= " $opts";
@@ -84,7 +84,7 @@ sub run_test ($) {
     };
 
     if ($@) {
-        # timed out 
+
         if ($@ =~ /timeout/) {
 
             if (!defined $block->expect_timeout) {
@@ -103,7 +103,6 @@ sub run_test ($) {
     }
 
     if (defined $block->out) {
-        #print($out);
         is $out, $block->out, "$name - stdout eq okay";
     }
 
@@ -116,7 +115,6 @@ sub run_test ($) {
     }
 
     if (defined $block->err) {
-        #print($err);
         is $err, $block->err, "$name - stderr eq okay";
     }
 
