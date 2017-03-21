@@ -1,8 +1,6 @@
-
-# vi: ft= et tw=4 sw=4
-
 use lib 't/lib';
-use Test::Sakura 'no_plan';
+#use Test::Sakura 'no_plan';
+use Test::Sakura skip_all => 'Skip on not supported';
 
 run_tests();
 
@@ -27,7 +25,7 @@ int main()
 
    int b[4];
 
-   b = a;
+   b = a;  // not supported
 
    printf("%d %d %d %d\n", b[0], b[1], b[2], b[3]);
 

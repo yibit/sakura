@@ -2,7 +2,8 @@
 # vi: ft= et tw=4 sw=4
 
 use lib 't/lib';
-use Test::Sakura 'no_plan';
+use Test::Sakura skip_all => 'Skip: does not compile even with gcc';
+
 
 run_tests();
 
@@ -111,6 +112,7 @@ char *pp, lbuf[LMAX], pbuf[PMAX];
 
 char *cclass();
 char *pmatch();
+void store(int op);
 
 
 /*** Display a file name *******************************/
