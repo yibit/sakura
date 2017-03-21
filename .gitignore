@@ -66,6 +66,7 @@ tcc-doc.info
 conftest*
 tiny_libmaker
 win32
+fred.txt
 *.dSYM
 *.udb
 *~

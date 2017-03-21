@@ -12,7 +12,6 @@ __DATA__
 
 === TEST 1: test stdio
 --- src
---- SKIP
 #include <stdio.h>
 
 int main()
