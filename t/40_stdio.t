@@ -2,7 +2,8 @@
 # vi: ft= et tw=4 sw=4
 
 use lib 't/lib';
-use Test::Sakura 'no_plan';
+#use Test::Sakura 'no_plan';
+use Test::Sakura skip_all => 'Skip on Darwin';
 
 run_tests();
 
@@ -11,7 +12,7 @@ __DATA__
 
 === TEST 1: test stdio
 --- src
-
+--- SKIP
 #include <stdio.h>
 
 int main()

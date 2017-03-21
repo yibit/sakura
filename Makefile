@@ -312,9 +312,13 @@ tcc-doc.info: tcc-doc.texi
 # in tests subdir
 export LIBTCC1
 
-%est: all
+check: 
+	$(MAKE) -C tests test
+	prove t	
+
+test: all
 	$(MAKE) -C tests $@
-	prove -v
+	prove -v t
 
 clean:
 	rm -vf $(PROGS) tcc_p$(EXESUF) tcc.pod *~ *.o *.a *.so* *.out *.exe libtcc_test$(EXESUF)

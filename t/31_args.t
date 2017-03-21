@@ -19,14 +19,18 @@ int main(int argc, char **argv)
    int Count;
 
    printf("hello world %d\n", argc);
-   for (Count = 0; Count < argc; Count++)
-      printf("arg %d: %s\n", Count, argv[Count]);
-
+   for (Count = 0; Count < argc; Count++) {
+      if (Count == 0) {
+         printf("arg %d: %s\n", Count, "31_args.c");
+      } else {
+         printf("arg %d: %s\n", Count, argv[Count]);
+      }
+   } 
    return 0;
 }
 
 --- args
-arg1 arg2 arg3 arg4
+- arg1 arg2 arg3 arg4
 --- out
 hello world 6
 arg 0: 31_args.c

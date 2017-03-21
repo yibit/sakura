@@ -277,10 +277,9 @@ int main(int argc, char **argv)
 #endif
 
 --- args
---- out
+--- out_like
      _   _       _       _  
   |  _|  _| |_| |_  |_    | 
   | |_   _|   |  _| |_|   | 
 
 --- err
-
